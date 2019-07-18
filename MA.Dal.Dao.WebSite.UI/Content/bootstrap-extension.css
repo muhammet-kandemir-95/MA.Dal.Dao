@@ -1,0 +1,46 @@
+﻿.sidenav-second-level > li > a {
+    font-size: 15px;
+}
+
+.content-wrapper {
+    background-color: rgb(22, 22, 22);
+}
+
+.sticky-footer small,
+.normal-text span {
+    color: rgb(220, 220, 220);
+}
+
+    .sticky-footer small a,
+    .normal-text a,
+    .navbar-brand a {
+        color: rgb(86, 156, 214);
+    }
+
+ol.breadcrumb {
+    background-color: #000;
+}
+
+li.breadcrumb-item.active {
+    color: rgb(220, 220, 220);
+}
+
+.breadcrumb-item > a {
+    color: rgb(86, 156, 214);
+}
+
+img {
+    max-width: 100%;
+    max-height: 70%;
+    display: inline-block;
+}
+
+.normal-text {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+hr {
+    background-color: white;
+}

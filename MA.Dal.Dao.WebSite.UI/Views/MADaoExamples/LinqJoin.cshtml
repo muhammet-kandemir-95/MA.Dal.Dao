@@ -1,0 +1,1127 @@
+﻿@section BreadCrumb {
+    <li class="breadcrumb-item">
+        <a href="#">MA.Dao Examples</a>
+    </li>
+    <li class="breadcrumb-item active">@ViewBag.Title</li>
+}
+
+@section Styles {
+
+}
+
+@section Scripts {
+     <script>
+         disableCsharp = true;
+     </script>
+}
+
+<div class="row">
+    <span style="
+    float:left;width:calc(100% - 50px);box-sizing:border-box;margin-left:20px;background-color:gainsboro;padding-left:10px;padding-right:10px;border-radius:3px;margin-bottom:10px;font-size:14px;padding-top:5px;padding-bottom:5px;font-weight: bold;">
+        Learn MA.Dao Extension "<a href="/MADaoVisualStudioExtension/HowToUse" target="_blank">How To Use</a>" for MA.Dao!
+    </span>
+    <div class="csharp-code-example">
+       
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>using</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> <span class=SpellE><span class=GramE>MA.Dal</span></span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>using</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> <span class=SpellE><span class=GramE>MA.Dao.Entity</span></span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>using</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> System;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>using</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> <span class=SpellE>System.Data</span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>using</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> <span class=SpellE><span class=GramE>MA.Database.Tables</span></span>;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>namespace</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> Learn<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>static</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> </span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:blue'>class</span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'> </span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:#2B91AF'>Program</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>static</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> </span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:blue'>void</span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'> Main(</span><span
+class=GramE><span style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:blue'>string</span><span style='font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black'>[</span></span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'>] <span class=SpellE>args</span>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:green'>// Entity for
+database connection<span style='mso-spacerun:yes'> &nbsp;&nbsp;</span></span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:blue'>using</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> (<span class=SpellE>MAEntity</span> entity = </span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>MAEntity</span>(</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:#A31515'>&quot;&lt;<span class=SpellE>connection_string</span>&gt;&quot;</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'>))<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'>/* <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Example MSSQL Table Schema
+=&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>CREATE TABLE [<span
+class=SpellE>dbo</span><span class=GramE>].[</span>users](<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[<span class=SpellE>user_id</span>]
+[char<span class=GramE>](</span>36) NOT NULL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>[<span
+class=SpellE>login_name</span>] [<span class=SpellE>nvarchar</span><span
+class=GramE>](</span>50) NOT NULL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[<span class=SpellE>login_password</span>]
+[<span class=SpellE>nvarchar</span><span class=GramE>](</span>50) NOT NULL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[<span class=SpellE>show_name</span>]
+[<span class=SpellE>nvarchar</span><span class=GramE>](</span>50) NOT NULL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[<span class=SpellE>deleted_code</span>]
+[varchar<span class=GramE>](</span>10) NOT NULL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>CONSTRAINT [<span
+class=SpellE>PK_users</span>] PRIMARY KEY CLUSTERED <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[<span class=SpellE>user_id</span>]
+ASC<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>)WITH</span>
+(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>) ON [PRIMARY]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</span>-------------------------------------------<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>CREATE TABLE [<span
+class=SpellE>dbo</span><span class=GramE>].[</span>products](<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[<span class=SpellE>product_id</span>]
+[char<span class=GramE>](</span>36) NOT NULL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[<span class=SpellE>user_id</span>]
+[char<span class=GramE>](</span>36) NOT NULL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>[name] [<span
+class=SpellE>nvarchar</span><span class=GramE>](</span>50) NOT NULL,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span>CONSTRAINT [<span
+class=SpellE>PK_products</span>] PRIMARY KEY CLUSTERED <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>[<span class=SpellE>product_id</span>]
+ASC<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>)WITH</span>
+(PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF,
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>) ON [PRIMARY]<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span></span><span style='font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#region</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> Join<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#region</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> Inner Join<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'>/* <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Example =&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>SELECT <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE>user.user_id</span>
+AS ID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>product.name AS
+NAME<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>FROM <span
+class=SpellE><span class=GramE>dbo.users</span></span> AS user <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>INNER JOIN <span
+class=SpellE><span class=GramE>dbo.products</span></span> AS product ON <span
+class=SpellE>product.user_id</span> = <span class=SpellE>user.user_id</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>WHERE <span
+class=SpellE>user.login_name</span> = 'MUHAMMED_KANDEMIR'<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class=SpellE><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>var</span></span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>queryInnerJoin</span>
+= <span class=SpellE><span class=GramE>users.Query</span></span>().<span
+class=SpellE>InnerJoin</span>(<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE><span
+class=GramE>products.Query</span></span>(),<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(user, product) =&gt; <span
+class=SpellE>product.user_id</span> == <span class=SpellE>user.user_id</span>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(user, product) =&gt; </span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>ID = <span
+class=SpellE>user.user_id</span>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>NAME = product.name,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:green'>// For where</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE>user.login_name</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>})<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>.Where</span>(o
+=&gt; <span class=SpellE>o.login_name</span> == </span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:#A31515'>&quot;MUHAMMED_KANDEMIR&quot;</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>.Select</span>(o
+=&gt; </span><span style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>o.ID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>o.NAME<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>});<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class=SpellE><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>var</span></span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>queryInnerJoin_ToList</span>
+= <span class=SpellE>queryInnerJoin.ToList</span>(entity);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#<span
+class=SpellE>endregion</span></span><span style='font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#region</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> Left Join<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'>/* <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span>Example =&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>SELECT <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE>user.user_id</span>
+AS ID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>product.name AS
+NAME<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>FROM <span
+class=SpellE><span class=GramE>dbo.users</span></span> AS user <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'> </span>LEFT JOIN <span class=SpellE><span
+class=GramE>dbo.products</span></span> AS product ON <span class=SpellE>product.user_id</span>
+= <span class=SpellE>user.user_id</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>WHERE <span
+class=SpellE>user.login_name</span> = 'MUHAMMED_KANDEMIR'<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class=SpellE><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>var</span></span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>queryLeftJoin</span>
+= <span class=SpellE><span class=GramE>users.Query</span></span>().<span
+class=SpellE>LeftJoin</span>(<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE><span
+class=GramE>products.Query</span></span>(),<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(user, product) =&gt; <span
+class=SpellE>product.user_id</span> == <span class=SpellE>user.user_id</span>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(user, product) =&gt; </span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>ID = <span
+class=SpellE>user.user_id</span>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>NAME = product.name,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:green'>// For where</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE>user.login_name</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>})<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>.Where</span>(o
+=&gt; <span class=SpellE>o.login_name</span> == </span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:#A31515'>&quot;MUHAMMED_KANDEMIR&quot;</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>.Select</span>(o
+=&gt; </span><span style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>o.ID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>o.NAME<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>});<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class=SpellE><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>var</span></span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>queryLeftJoin_ToList</span>
+= <span class=SpellE>queryLeftJoin.ToList</span>(entity);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#<span
+class=SpellE>endregion</span></span><span style='font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#region</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> Right Join<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'>/* <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Example =&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>SELECT <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE>user.user_id</span>
+AS ID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>product.name AS
+NAME<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>FROM <span
+class=SpellE><span class=GramE>dbo.users</span></span> AS user <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>RIGHT JOIN <span
+class=SpellE><span class=GramE>dbo.products</span></span> AS product ON <span
+class=SpellE>product.user_id</span> = <span class=SpellE>user.user_id</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>WHERE <span class=SpellE>user.login_name</span>
+= 'MUHAMMED_KANDEMIR'<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class=SpellE><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>var</span></span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>queryRightJoin</span>
+= <span class=SpellE><span class=GramE>users.Query</span></span>().<span
+class=SpellE>RightJoin</span>(<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE><span
+class=GramE>products.Query</span></span>(),<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(user, product) =&gt; <span
+class=SpellE>product.user_id</span> == <span class=SpellE>user.user_id</span>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>(user, product) =&gt; </span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>ID = <span
+class=SpellE>user.user_id</span>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>NAME = product.name,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:green'>// For where</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE>user.login_name</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>})<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span class=GramE>.Where</span>(o =&gt; <span
+class=SpellE>o.login_name</span> == </span><span style='font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:#A31515'>&quot;MUHAMMED_KANDEMIR&quot;</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>.Select</span>(o
+=&gt; </span><span style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>o.ID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>o.NAME<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>});<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class=SpellE><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>var</span></span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>queryRightJoin_ToList</span>
+= <span class=SpellE>queryRightJoin.ToList</span>(entity);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#<span
+class=SpellE>endregion</span></span><span style='font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#region</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'> Full Join<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'>/* <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Example =&gt;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>SELECT <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE>user.user_id</span>
+AS ID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>product.name AS
+NAME<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FROM <span class=SpellE><span
+class=GramE>dbo.users</span></span> AS user <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>FULL JOIN <span
+class=SpellE><span class=GramE>dbo.products</span></span> AS product ON <span
+class=SpellE>product.user_id</span> = <span class=SpellE>user.user_id</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>WHERE <span
+class=SpellE>user.login_name</span> = 'MUHAMMED_KANDEMIR'<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class=SpellE><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>var</span></span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>queryFullJoin</span>
+= <span class=SpellE><span class=GramE>users.Query</span></span>().<span
+class=SpellE>FullJoin</span>(<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE><span
+class=GramE>products.Query</span></span>(),<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(user, product) =&gt; <span
+class=SpellE>product.user_id</span> == <span class=SpellE>user.user_id</span>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>(user, product) =&gt; </span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>ID = <span
+class=SpellE>user.user_id</span>,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span>NAME = product.name,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:green'>// For where</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=SpellE>user.login_name</span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>})<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>.Where</span>(o
+=&gt; <span class=SpellE>o.login_name</span> == </span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:#A31515'>&quot;MUHAMMED_KANDEMIR&quot;</span><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black'>)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE>.Select</span>(o
+=&gt; </span><span style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:blue'>new</span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> {<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'> </span>o.ID,<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>o.NAME<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>});<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span class=SpellE><span
+style='font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue'>var</span></span><span style='font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black'> <span class=SpellE>queryFullJoin_ToList</span>
+= <span class=SpellE>queryFullJoin.ToList</span>(entity);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#<span
+class=SpellE>endregion</span></span><span style='font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray'>#<span
+class=SpellE>endregion</span></span><span style='font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:9.5pt;line-height:107%;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black'>}</span></p>
+
+</div>
+
+    </div>
+</div>

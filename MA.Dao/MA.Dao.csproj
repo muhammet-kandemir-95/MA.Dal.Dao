@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C12E2120-BC12-4D64-ADDD-9FBFF13B9862}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MA.Dao</RootNamespace>
+    <AssemblyName>MA.Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MA.Dao.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\MADataColumnAttribute.cs" />
+    <Compile Include="Attributes\MADataKeyAttribute.cs" />
+    <Compile Include="Attributes\MADataNameAttribute.cs" />
+    <Compile Include="Entity\Linq\IMAEntityLinqQuery.cs" />
+    <Compile Include="Entity\Linq\IMAEntityLinqQueryFirst.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinqConvertExpression.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinqExtensions.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinqOrder.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinqQuery.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinqQueryFromName.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinqQueryTable.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinqQueryViewOrFunc.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinqSql.cs" />
+    <Compile Include="Entity\Linq\MAEntityLinq_CreateDynamicObject.cs" />
+    <Compile Include="Entity\MADaoProcedureEntity.cs" />
+    <Compile Include="Entity\MADaoViewOrFuncEntity.cs" />
+    <Compile Include="MADaoBase.cs" />
+    <Compile Include="MADaoProcedure.cs" />
+    <Compile Include="MADaoTable.cs" />
+    <Compile Include="MADaoProperty.cs" />
+    <Compile Include="MADaoViewOrFunc.cs" />
+    <Compile Include="Entity\MAEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entity\MADaoTableEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MA.Dal\MA.Dal.csproj">
+      <Project>{5a591807-ff21-4a96-8df8-48f1bb10263b}</Project>
+      <Name>MA.Dal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

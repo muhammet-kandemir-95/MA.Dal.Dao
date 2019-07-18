@@ -1,0 +1,30 @@
+﻿.csharp-code-example {
+    float: left;
+    width: 100%;
+    overflow: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+    .csharp-code-example span:not(:empty)[style*="color:black"] {
+        color: rgb(220, 220, 220) !important;
+    }
+
+    .csharp-code-example span:not(:empty)[style*="color:blue"] {
+        color: rgb(86, 156, 214) !important;
+    }
+
+    .csharp-code-example span:not(:empty)[style*="color:#2B91AF"] {
+        color: rgb(78, 201, 176) !important;
+    }
+
+    .csharp-code-example span:not(:empty)[style*="color:#A31515"] {
+        color: rgb(214, 157, 133) !important;
+    }
+
+    .csharp-code-example span:not(:empty)[style*="color:green"] {
+        color: rgb(87, 166, 74) !important;
+    }

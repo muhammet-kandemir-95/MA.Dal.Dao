@@ -1,0 +1,2 @@
+﻿# robots.txt for MA.Dal.Dao
+User-agent: *

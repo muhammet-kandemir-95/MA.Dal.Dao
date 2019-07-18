@@ -1,0 +1,855 @@
+﻿@section BreadCrumb {
+    <li class="breadcrumb-item">
+        <a href="#">MA.Dao Examples</a>
+    </li>
+    <li class="breadcrumb-item active">@ViewBag.Title</li>
+}
+
+@section Styles {
+
+}
+
+@section Scripts {
+
+}
+
+<div class="row">
+    <span style="
+    float:left;width:calc(100% - 50px);box-sizing:border-box;margin-left:20px;background-color:gainsboro;padding-left:10px;padding-right:10px;border-radius:3px;margin-bottom:10px;font-size:14px;padding-top:5px;padding-bottom:5px;font-weight: bold;">
+        Learn MA.Dao Extension "<a href="/MADaoVisualStudioExtension/HowToUse" target="_blank">How To Use</a>" for MA.Dao!
+    </span>
+    <div class="csharp-code-example">
+        <div class="WordSection1">
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">using</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">MA.Dal;<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">using</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">MA.Dao.Entity;<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">using</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">System;<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">using</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">System.Data;<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">using</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">MA.Database.Tables;<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">namespace</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">Learn<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black">{<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">static</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"></span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:blue">class</span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"></span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:#2B91AF">Program</span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">static</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"></span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:blue">void</span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black">Main(</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue">string</span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black">[] args)<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    // Entity for
+                    database connection
+                </span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">using</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">(MAEntity entity =</span><span style="font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">new</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">MAEntity(</span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:#A31515">"&lt;connection_string&gt;"</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">))<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">/*<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Example MSSQL Table Schema
+                    =&gt;<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>CREATE TABLE [dbo].[users](<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>[user_id] [char](36) NOT
+                    NULL,<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>[login_name] [nvarchar](50)
+                    NOT NULL,<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>[login_password] [char](32)
+                    NOT NULL,<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>[show_name] [nvarchar](50)
+                    NOT NULL,<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>[deleted_code] [int] NOT
+                    NULL,<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>CONSTRAINT [PK_users]
+                    PRIMARY KEY CLUSTERED <o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>(<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-tab-count:2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>[user_id] ASC<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>)WITH (PAD_INDEX = OFF,
+                    STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON,
+                    ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>) ON [PRIMARY]<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/</span><span style="font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray">#region</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">Where<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray">#region</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">Example 1<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">/*<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Example =&gt;<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SELECT<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>t1.user_id AS Id,<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>t1.login_name AS Name<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>FROM dbo.users AS t1<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WHERE t1.deleted_code = 0<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*/</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">queryWhereExample1 = users.Query()<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black">
+                    <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>.Where(o =&gt;
+                    o.deleted_code == 0)<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>.Select(o =&gt;</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue">new</span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span>{<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Id = o.user_id,<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Name = o.login_name<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>});<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    // Query
+                    to data array
+                </span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">queryWhereExample1_ToList = queryWhereExample1.ToList(entity);<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    // Sql
+                    script text and sql parameters
+                </span><span style="font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">
+                    queryWhereExample1_SqlQueryAndParameters =
+                    queryWhereExample1.ToSql();<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray">#endregion</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray">#region</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">Example 2<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">/*<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Example =&gt;<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>SELECT<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>t1.user_id AS Id,<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>t1.login_name AS Name<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FROM dbo.users AS t1<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WHERE t1.deleted_code = 0
+                    AND t1.show_name LIKE 'test%'<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*/</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">queryWhereExample2 = users.Query()<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black">
+                    <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>.Where(o =&gt;
+                    o.deleted_code == 0 &amp;&amp; o.show_name.StartsWith(
+                </span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:#A31515">"test"</span><span style="font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black">))<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>.Select(o =&gt;</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue">new</span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Id = o.user_id,<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Name = o.login_name<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>});<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    // Query
+                    to data array
+                </span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">queryWhereExample2_ToList = queryWhereExample2.ToList(entity);<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    // Sql
+                    script text and sql parameters
+                </span><span style="font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">
+                    queryWhereExample2_SqlQueryAndParameters =
+                    queryWhereExample2.ToSql();<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray">#endregion</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray">#region</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">Example 3<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">/*<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Example =&gt;<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>SELECT<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>t1.user_id AS Id,<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>t1.login_name AS Name<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>FROM dbo.users AS t1<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>WHERE LEN(t1.user_id +
+                    CAST(t1.deleted_code AS NVARCHAR(MAX))) &gt; 37<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>*/</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">queryWhereExample3 = users.Query()<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black">
+                    <span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>.Where(o =&gt; (o.user_id +
+                    o.deleted_code.ToString()).Length &gt; 37)<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>.Select(o =&gt;</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:blue">new</span><span style="font-size:9.5pt;font-family:Consolas;
+mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Id = o.user_id,<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Name = o.login_name<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>});<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="font-size:9.5pt;
+font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    // Query to
+                    data array
+                </span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:
+Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">queryWhereExample3_ToList = queryWhereExample3.ToList(entity);<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:green">
+                    // Sql
+                    script text and sql parameters
+                </span><span style="font-size:9.5pt;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:blue">var</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black">
+                    queryWhereExample3_SqlQueryAndParameters =
+                    queryWhereExample3.ToSql();<o:p></o:p>
+                </span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray">#endregion</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><o:p>&nbsp;</o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:gray">#endregion</span><span style="font-size:9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;
+color:black"><o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+normal;mso-layout-grid-align:none;text-autospace:none">
+                <span style="font-size:
+9.5pt;font-family:Consolas;mso-bidi-font-family:Consolas;color:black"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span>
+            </p>
+
+            <p class="MsoNormal">
+                <span style="font-size:9.5pt;line-height:107%;font-family:
+Consolas;mso-bidi-font-family:Consolas;color:black">}</span>
+            </p>
+
+        </div>
+    </div>
+</div>
